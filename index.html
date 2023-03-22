@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>KakaoTalk Embed</title>
+<script id="javascript-sdk" src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<p><strong>Click the image below</strong> By. Blackcats4567</p>
+<a id="kakao-link-btn" href="javascript:sendLink()">
+  <img
+    src="https://developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"
+  />
+</a>
+<script type="text/javascript">
+ Kakao.init('	c4a2f2da66bb0b0945df9fee9ca668f5');
+  function sendLink() {
+    Kakao.Link.sendDefault({
+      objectType: 'feed',
+      content: {
+        title: 'CocoVR',
+        description: 'Coconut want eat Kakao',
+        imageUrl:
+          'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXz8GnRGQA-tKDkACe_IkI1xCnRA5Cmr3j4Q&usqp=CAU',
+        link: {
+          mobileWebUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXz8GnRGQA-tKDkACe_IkI1xCnRA5Cmr3j4Q&usqp=CAU',
+          webUrl: 'IMGCLICK PC URL',
+        },
+      },
+      social: {
+        likeCount: LIKE, //99999 is the maximum
+        commentCount: COMMENT, //99999 is the maximum
+        sharedCount: SHARED, //99999 is the maximum
+      },
+      buttons: [
+        {
+          title: 'Cococo',
+          link: {
+            mobileWebUrl: 'https://www.youtube.com/watch?v=BpAe8d-CXKk',
+            webUrl: 'https://www.youtube.com/watch?v=BpAe8d-CXKk',
+          },
+        },
+      ],
+    })
+  }
+</script>
+<!-- www.blackcats4567.com -->
+<!-- When clicking on the image/button, the address should be placed in Kakao Developers' Application> Platform> Web to be displayed successfully when clicked. -->
+  </body>
+</html>
